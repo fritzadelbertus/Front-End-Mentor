@@ -1,21 +1,21 @@
-import { Link } from 'react-router-dom'
-import Solutions from '../../Solutions/solutions'
+import Solutions from '../../solutions'
 import './SolutionList.scss'
+
 type SolutionCardType = {
   title: string,
   difficulty: string,
   repo: string,
-  path: string,
+  page: string,
 }
 
-function SolutionCard( {title, difficulty, repo, path}: SolutionCardType ) {
+function SolutionCard( {title, difficulty, repo, page}: SolutionCardType ) {
   return (
     <div className="SolutionCard">
       <h3>{title}</h3>
       <p>{difficulty}</p>
       <div className='link-box'>
         <a href={repo}><i className="fa-brands fa-github"></i></a>
-        <Link to={`/solution/${path}`}><i className="fa-solid fa-globe"></i></Link>
+        <a href={page}><i className="fa-solid fa-globe"></i></a>
       </div>
     </div>
   ) 
@@ -33,7 +33,7 @@ function SolutionList() {
               title={solution.title}
               difficulty={solution.difficulty}
               repo={solution.repo}
-              path={solution.path} />
+              page={solution.page} />
           ))
         }
       </div>
