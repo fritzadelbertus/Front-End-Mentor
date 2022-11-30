@@ -1,5 +1,5 @@
-import Dashboard from './Dashboard/Dashboard'
-import SolutionView from './SolutionView/SolutionView'
+import Dashboard from './components/Dashboard/Dashboard'
+import SolutionView from './components/SolutionView/SolutionView'
 import Solutions from './Solutions/solutions'
 import { Route, Routes } from 'react-router-dom'
 import './App.scss'
